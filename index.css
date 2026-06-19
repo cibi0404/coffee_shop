@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+body{
+    font-family: "poppins";
+}
+
+/* HEADER SECTION */
+
+/* HEADER-LOGO */
+.HEADER-LOGO {
+    font-family: "Great Vibes", cursive;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login_btn{
+    border: 1px solid #cc6e26;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login_btn i:hover{
+    color: #ffffff;
+
+}
+
+.menu span{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.menu span:hover{
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+li,li:hover{
+    transition: 0.2s ease;
+    border-bottom:transparent 2px solid;
+    width: fit-content;
+}
+
+.active,li:hover{
+    color: #cc6e26;
+    border-bottom: 2px solid;
+}
+
+/*--------------------------*/
+
+/* HERO-SECTION */
+
+.heros img{
+    width: 100%;
+    height: auto;
+}
+
+.heros{
+    position: relative;
+}
+
+.text-contents{
+    padding-top: 20px;
+    position:absolute;
+    top:30%;
+    transform:translateY(-50%);
+    color:white;
+    padding-left:50px;
+}
+
+@media(max-width:766px){
+
+.text-contents{
+    top:30%;
+    padding-left:20px;
+    font-size: 2vw;
+}
+
+.text-contents p{
+    width: 80%;
+}
+
+.heros_btn{
+    font-size: 2vw;
+    padding-bottom: 50px;
+}
+}
+
+/* SERVICE */
+/* SERVICE */
+
+#service{
+    background-color:#F6EFE7;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content: space-evenly;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px;
+
+    height:auto;
+}
+
+.service{
+
+    width:160px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px;
+}
+
+.service img{
+    width:40px;
+    height:auto;
+}
+
+/* MOBILE */
+
+@media(max-width:766px){
+
+#service{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:10px;
+
+padding:15px;
+
+}
+
+.service{
+
+width:100%;
+
+}
+
+.service p{
+
+font-size:12px;
+
+}
+
+}
