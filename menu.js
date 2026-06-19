@@ -9,7 +9,7 @@ const items = [
   { name: "Blueberry Muffin", price: "$2.75", cat: "Food",        img: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400" },
 ];
 
-// Step 2 - build cards and show on screen
+
 function render(cat) {
   const list = cat === "All" ? items : items.filter(i => i.cat === cat);
 
@@ -24,7 +24,6 @@ function render(cat) {
   `).join("");
 }
 
-// Step 3 - listen for tab clicks
 document.getElementById("tabs").addEventListener("click", function(e) {
   if (e.target.tagName !== "BUTTON") return;
 
@@ -34,5 +33,5 @@ document.getElementById("tabs").addEventListener("click", function(e) {
   render(e.target.dataset.cat);
 });
 
-// Step 4 - show all items when page loads
+
 render("All");
