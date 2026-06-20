@@ -1,0 +1,1297 @@
+/* ==========================================================================
+   Aroma Cafe - Premium Login & Registration Page Stylesheet
+   ========================================================================== */
+
+/* --- Custom Properties / Design Tokens --- */
+:root {
+  /* Color Palette */
+  --clr-roast-darkest: #120803;   /* Rich deep espresso bean */
+  --clr-roast-dark: #221006;      /* Dark chocolate / strong brew */
+  --clr-roast-medium: #3c1e0b;    /* Medium roast */
+  --clr-caramel-accent: #c68a4c;  /* Warm golden caramel */
+  --clr-caramel-hover: #b07436;   /* Darker caramel for hover states */
+  --clr-cream-latte: #f8f4f0;     /* Creamy milk froth */
+  --clr-white: #ffffff;
+  --clr-glass-bg: rgba(255, 255, 255, 0.08);
+  --clr-glass-border: rgba(255, 255, 255, 0.15);
+  
+  /* System Colors */
+  --clr-success: #2ec4b6;
+  --clr-success-bg: rgba(46, 196, 182, 0.1);
+  --clr-error: #e63946;
+  --clr-error-bg: rgba(230, 57, 70, 0.1);
+  --clr-text-main: #33221c;       /* Dark mocha brown for body text */
+  --clr-text-muted: #72625b;      /* Muted brown for subtitles */
+  
+  /* Fonts */
+  --ff-display: 'Playfair Display', Georgia, serif;
+  --ff-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  
+  /* Shadows & Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 50px;
+  --shadow-sm: 0 4px 6px -1px rgba(18, 8, 3, 0.05), 0 2px 4px -1px rgba(18, 8, 3, 0.03);
+  --shadow-md: 0 10px 15px -3px rgba(18, 8, 3, 0.1), 0 4px 6px -2px rgba(18, 8, 3, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(18, 8, 3, 0.15), 0 10px 10px -5px rgba(18, 8, 3, 0.04);
+  --shadow-inner: inset 0 2px 4px 0 rgba(18, 8, 3, 0.06);
+  --shadow-glow: 0 0 15px rgba(198, 138, 76, 0.35);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Document Resets --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+}
+
+body {
+  font-family: var(--ff-body);
+  color: var(--clr-text-main);
+  background-color: var(--clr-roast-darkest);
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Scrollbar Customization --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--clr-cream-latte);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clr-caramel-accent);
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-caramel-hover);
+}
+
+/* --- Container Page Layout --- */
+.login-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Left Side: Visual Branding Panel
+   ========================================================================== */
+.visual-side {
+  position: relative;
+  background-image: url('image/coffee-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  overflow: hidden;
+  animation: fadeInBackground 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg, 
+    rgba(18, 8, 3, 0.85) 0%, 
+    rgba(34, 16, 6, 0.65) 50%, 
+    rgba(18, 8, 3, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+.visual-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Brand Logo Top */
+.brand-logo-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--clr-white);
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.brand-logo-top i {
+  color: var(--clr-caramel-accent);
+  font-size: 1.8rem;
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+/* Welcome Titles */
+.carousel-text {
+  max-width: 520px;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slideUpIntro 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.visual-title {
+  font-family: var(--ff-display);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--clr-white);
+  margin-bottom: 1.5rem;
+}
+
+.visual-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+}
+
+/* Glassmorphic Stats Card */
+.stats-glass-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--clr-glass-bg);
+  border: 1px solid var(--clr-glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  max-width: 420px;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slideUpIntro 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--ff-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.gold-star {
+  color: #ffb703;
+  font-size: 1.1rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.25rem;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--clr-glass-border);
+}
+
+
+/* ==========================================================================
+   Right Side: Forms Panel
+   ========================================================================== */
+.form-side {
+  background-color: var(--clr-cream-latte);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.form-scroll-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpForm 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+/* Mobile Branding Element */
+.mobile-logo {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  color: var(--clr-roast-dark);
+}
+
+.mobile-logo i {
+  color: var(--clr-caramel-accent);
+  font-size: 1.8rem;
+}
+
+/* --- Tab Control Switcher --- */
+.tab-container {
+  display: flex;
+  position: relative;
+  background: rgba(18, 8, 3, 0.05);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(18, 8, 3, 0.03);
+}
+
+.tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: color var(--transition-normal);
+  outline: none;
+}
+
+.tab-btn.active {
+  color: var(--clr-white);
+}
+
+.tab-slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background-color: var(--clr-roast-dark);
+  border-radius: var(--radius-pill);
+  z-index: 1;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- Form Panels --- */
+.form-panel {
+  display: none;
+  opacity: 0;
+  transform: translateX(15px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.form-panel.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.panel-title {
+  font-family: var(--ff-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--clr-roast-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.panel-subtitle {
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* --- Floating Input Group --- */
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1.2rem 1rem 0.8rem 2.8rem;
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  color: var(--clr-roast-darkest);
+  background-color: var(--clr-white);
+  border: 1.5px solid rgba(18, 8, 3, 0.12);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+/* Add indent spacing for error or active states */
+.form-input:focus {
+  border-color: var(--clr-caramel-accent);
+  box-shadow: 0 0 0 3px rgba(198, 138, 76, 0.15);
+}
+
+/* Floating Label behavior */
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 2.8rem;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+  pointer-events: none;
+  transition: transform var(--transition-normal), top var(--transition-normal), font-size var(--transition-normal), color var(--transition-normal);
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--clr-text-muted);
+  font-size: 1.1rem;
+  pointer-events: none;
+  transition: color var(--transition-normal);
+}
+
+/* Focused or Filled State */
+.form-input:focus ~ .form-label,
+.form-input:valid ~ .form-label,
+.form-input.has-content ~ .form-label {
+  top: 0.7rem;
+  transform: translateY(-50%) scale(0.8);
+  transform-origin: left top;
+  color: var(--clr-caramel-accent);
+}
+
+.form-input:focus ~ .input-icon {
+  color: var(--clr-caramel-accent);
+}
+
+/* Input password toggler */
+.password-toggle-btn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text-muted);
+  font-size: 1.05rem;
+  padding: 0.25rem;
+  outline: none;
+  transition: color var(--transition-fast);
+}
+
+.password-toggle-btn:hover {
+  color: var(--clr-caramel-accent);
+}
+
+/* Validation Styles */
+.validation-status {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: var(--clr-success);
+  display: none;
+  pointer-events: none;
+}
+
+.error-text {
+  font-size: 0.78rem;
+  color: var(--clr-error);
+  margin-top: 0.35rem;
+  display: none;
+  animation: fadeInDown var(--transition-fast) forwards;
+}
+
+/* Input Error State styles */
+.input-group.has-error .form-input {
+  border-color: var(--clr-error);
+  background-color: var(--clr-error-bg);
+}
+
+.input-group.has-error .input-icon,
+.input-group.has-error .form-label {
+  color: var(--clr-error);
+}
+
+.input-group.has-error .error-text {
+  display: block;
+}
+
+/* Input Success State styles */
+.input-group.has-success .form-input {
+  border-color: var(--clr-success);
+  background-color: var(--clr-success-bg);
+}
+
+.input-group.has-success .validation-status {
+  display: block;
+}
+
+.input-group.has-success .password-toggle-btn {
+  display: none; /* Hide toggle eye when green check mark is shown */
+}
+
+
+/* --- Options Bar (Forgot Password / Remember Me) --- */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 0.88rem;
+}
+
+/* Checkbox Styling */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 1.75rem;
+  cursor: pointer;
+  user-select: none;
+  color: var(--clr-text-main);
+  font-weight: 500;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  background-color: var(--clr-white);
+  border: 1.5px solid rgba(18, 8, 3, 0.12);
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  border-color: var(--clr-caramel-accent);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--clr-caramel-accent);
+  border-color: var(--clr-caramel-accent);
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--clr-white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Forgot password link */
+.forgot-password-link, 
+.terms-link {
+  color: var(--clr-caramel-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.forgot-password-link:hover,
+.terms-link:hover {
+  color: var(--clr-caramel-hover);
+  text-decoration: underline;
+}
+
+/* Terms Checkbox Error Label */
+.checkbox-error {
+  display: none;
+  font-size: 0.78rem;
+  color: var(--clr-error);
+  margin-top: 0.35rem;
+}
+
+
+/* --- Password Strength Meter --- */
+.password-strength-container {
+  display: none;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown var(--transition-fast) forwards;
+}
+
+.strength-bar-wrapper {
+  height: 5px;
+  width: 100%;
+  background-color: rgba(18, 8, 3, 0.08);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin-bottom: 0.35rem;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--clr-error);
+  border-radius: var(--radius-pill);
+  transition: width var(--transition-normal), background-color var(--transition-normal);
+}
+
+.strength-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+}
+
+
+/* --- Buttons (Premium Styled Coffee theme) --- */
+.submit-btn {
+  width: 100%;
+  background-color: var(--clr-roast-dark);
+  color: var(--clr-white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  font-family: var(--ff-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.submit-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-out;
+}
+
+.submit-btn:hover {
+  background-color: var(--clr-roast-medium);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px -8px rgba(34, 16, 6, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md);
+}
+
+.submit-btn:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0s;
+}
+
+
+/* --- Social Authentication Section --- */
+.social-auth-section {
+  margin-top: 2rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--clr-text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(18, 8, 3, 0.1);
+}
+
+.divider:not(:empty)::before {
+  margin-right: 1rem;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 1rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--clr-white);
+  border: 1.5px solid rgba(18, 8, 3, 0.12);
+  border-radius: var(--radius-md);
+  padding: 0.9rem;
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--clr-roast-dark);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.social-btn:hover {
+  background-color: #faf7f5;
+  border-color: rgba(18, 8, 3, 0.25);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-logo {
+  width: 18px;
+  height: 18px;
+}
+
+.social-icon-brand {
+  font-size: 1.15rem;
+  color: #000000;
+}
+
+
+/* --- Form Footer --- */
+.form-footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--clr-text-muted);
+  border-top: 1px solid rgba(18, 8, 3, 0.04);
+}
+
+
+/* ==========================================================================
+   Loading Overlay & Brewing Animation
+   ========================================================================== */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(18, 8, 3, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal) ease-in-out;
+}
+
+.loading-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.brewing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brewing-text {
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  color: var(--clr-cream-latte);
+  letter-spacing: 1px;
+  animation: pulseText 2s ease-in-out infinite;
+}
+
+/* Coffee Cup Animation */
+.coffee-cup-wrapper {
+  position: relative;
+  width: 80px;
+  height: 90px;
+}
+
+.coffee-cup {
+  position: relative;
+  width: 60px;
+  height: 50px;
+  background-color: var(--clr-cream-latte);
+  border-radius: 0 0 30px 30px;
+  margin: 25px auto 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cup-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cup-handle {
+  position: absolute;
+  top: 32px;
+  right: 2px;
+  width: 18px;
+  height: 25px;
+  border: 5px solid var(--clr-cream-latte);
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+}
+
+.coffee-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--clr-roast-medium);
+  animation: fillCup 2s ease-in-out forwards;
+}
+
+.cup-saucer {
+  width: 76px;
+  height: 6px;
+  background-color: var(--clr-cream-latte);
+  border-radius: var(--radius-pill);
+  margin: 2px auto 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Steam Animation */
+.steam-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.steam-bubble {
+  width: 4px;
+  height: 18px;
+  background-color: rgba(248, 244, 240, 0.35);
+  border-radius: var(--radius-pill);
+}
+
+.steam-1 {
+  animation: steamRise 1.8s ease-in-out infinite 0.1s;
+}
+
+.steam-2 {
+  animation: steamRise 1.8s ease-in-out infinite 0.5s;
+}
+
+.steam-3 {
+  animation: steamRise 1.8s ease-in-out infinite 0.3s;
+}
+
+
+/* ==========================================================================
+   Forgot Password Modal
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 8, 3, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--clr-cream-latte);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+.modal-overlay.active .modal-card {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text-muted);
+  font-size: 1.25rem;
+  padding: 0.25rem;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  outline: none;
+}
+
+.modal-close-btn:hover {
+  color: var(--clr-roast-dark);
+  transform: rotate(90deg);
+}
+
+.modal-icon-container {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(198, 138, 76, 0.12);
+  color: var(--clr-caramel-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.modal-coffee-icon {
+  position: absolute;
+  font-size: 0.8rem;
+  top: 15px;
+  right: 15px;
+  color: var(--clr-roast-dark);
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.modal-title {
+  font-family: var(--ff-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--clr-roast-dark);
+  margin-bottom: 0.75rem;
+}
+
+.modal-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--clr-text-muted);
+  margin-bottom: 1.75rem;
+}
+
+/* Modal Success State Overlay */
+.modal-success-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-cream-latte);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.modal-success-state.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.success-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background-color: var(--clr-success-bg);
+  color: var(--clr-success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-success-state h4 {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  color: var(--clr-roast-dark);
+  margin-bottom: 0.75rem;
+}
+
+.modal-success-state p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--clr-text-muted);
+  margin-bottom: 2rem;
+}
+
+.modal-success-state strong {
+  color: var(--clr-roast-dark);
+}
+
+
+/* ==========================================================================
+   Toast Notification Banner
+   ========================================================================== */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 99999;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--clr-white);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-lg);
+  border-left: 4px solid var(--clr-caramel-accent);
+  color: var(--clr-text-main);
+  min-width: 300px;
+  max-width: 420px;
+  transform: translateX(100px);
+  opacity: 0;
+  animation: toastSlideIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.toast.toast-success {
+  border-left-color: var(--clr-success);
+}
+
+.toast.toast-error {
+  border-left-color: var(--clr-error);
+}
+
+.toast-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.toast-success .toast-icon {
+  color: var(--clr-success);
+}
+
+.toast-error .toast-icon {
+  color: var(--clr-error);
+}
+
+.toast-content {
+  flex-grow: 1;
+}
+
+.toast-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.15rem;
+}
+
+.toast-message {
+  font-size: 0.8rem;
+  color: var(--clr-text-muted);
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text-muted);
+  font-size: 0.95rem;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.toast-close:hover {
+  opacity: 1;
+}
+
+
+/* ==========================================================================
+   Animations & Keyframes
+   ========================================================================== */
+
+/* Page Loader Animations */
+@keyframes fillCup {
+  0% { height: 0%; }
+  100% { height: 80%; }
+}
+
+@keyframes steamRise {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-16px) scaleX(1.4) skewX(-5deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-32px) scaleX(0.7) skewX(8deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseText {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Page Intro Animations */
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes slideUpIntro {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpForm {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Toast Animations */
+@keyframes toastSlideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+
+/* ==========================================================================
+   Responsive Breakpoints & Media Queries
+   ========================================================================== */
+
+/* Large Tablets & Medium Screen Sizes (992px) */
+@media screen and (max-width: 1024px) {
+  .login-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .visual-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Small Tablets & Portrait Screens (768px) */
+@media screen and (max-width: 768px) {
+  .login-container {
+    grid-template-columns: 1fr; /* Single column */
+  }
+  
+  .visual-side {
+    display: none; /* Hide visual column on smaller layouts */
+  }
+  
+  .mobile-logo {
+    display: flex; /* Reveal branding on mobile top */
+  }
+  
+  .form-side {
+    background-color: var(--clr-cream-latte);
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .form-scroll-wrapper {
+    padding: 1.5rem;
+  }
+  
+  .form-card {
+    padding: 0;
+  }
+  
+  .toast-container {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+  
+  .toast {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* Small Handheld Devices (480px) */
+@media screen and (max-width: 480px) {
+  .panel-title {
+    font-size: 1.85rem;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .social-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .modal-card {
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: var(--radius-md);
+  }
+}
