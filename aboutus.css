@@ -3,44 +3,6 @@ body{
     color:white;
 }
 
-/* Navbar */
-
-
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.logo i{
-    font-size:28px;
-}
-
-ul{
-    display:flex;
-    list-style:none;
-    gap:40px;
-}
-
-ul li{
-    cursor:pointer;
-}
-
-.active{
-    color:#d7a16e;
-    border-bottom:2px solid #d7a16e;
-    padding-bottom:5px;
-}
-
-.login-btn{
-    padding:10px 25px;
-    background:transparent;
-    border:1px solid #d7a16e;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-}
 
 /* Hero */
 
@@ -147,16 +109,6 @@ ul li{
 
 @media(max-width:900px){
 
-    nav{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    ul{
-        gap:20px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
 
     .hero{
         flex-direction:column;
