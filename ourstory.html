@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,6 +90,397 @@
     <!-- SCRIP.JS -->
     <script src="./index.js"></script>
     <!------------------------------>
+
+</body>
+
+=======
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story - Coffee House</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ourstory.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="logo">
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" fill="#231509"/>
+        <path d="M10 25 Q10 32 20 32 Q30 32 30 25 L28 18 H12 L10 25Z" fill="#c8935a" opacity="0.9"/>
+        <path d="M28 20 Q34 20 34 24 Q34 28 28 27" stroke="#c8935a" stroke-width="2" fill="none"/>
+        <path d="M16 14 Q17 10 16 7" stroke="#c8935a" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M20 13 Q21 9 20 6" stroke="#c8935a" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M24 14 Q25 10 24 7" stroke="#c8935a" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo-text">Coffee House</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="ourstory.html" class="active">Our Story</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+    </ul>
+    <button class="btn-login" onclick="window.location.href='login.html'">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      Login
+    </button>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>></span>
+    Our Story
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-content" id="heroContent">
+      <p class="hero-eyebrow animate-fade-up">Our Story</p>
+      <h1 class="animate-fade-up delay-1">Brewing <em>Happiness</em><br/>Since Day One</h1>
+      <div class="hero-divider animate-fade-up delay-2">
+        <div class="line"></div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>
+        <div class="line"></div>
+      </div>
+      <p class="animate-fade-up delay-3">From a humble dream to a beloved community space — every cup we pour carries the warmth of that very first brew.</p>
+
+      <!-- STATS ROW -->
+      <div class="hero-stats animate-fade-up delay-4">
+        <div class="stat-item">
+          <span class="stat-num" data-target="14">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Brewing</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="200">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Baristas Trained</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="3">0</span><span class="stat-suffix"></span>
+          <span class="stat-label">Café Locations</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </div>
+
+  <!-- ORIGIN -->
+  <section class="origin reveal-section">
+    <div class="origin-img-wrap reveal-left">
+      <img src="./images/hero-vec.jpeg" alt="The founders of Coffee House at the original location" />
+      <div class="origin-img-badge">
+        <span class="since">Est.</span>
+        <span class="year">2010</span>
+      </div>
+    </div>
+    <div class="origin-text reveal-right">
+      <p class="section-eyebrow">Where It All Began</p>
+      <h2>A Simple Dream.<br/>A Warm Cup.</h2>
+      <div class="section-rule"></div>
+      <p>It started with a single question: what would the perfect coffee shop feel like? Not just the coffee — but the chairs, the light, the sound of rain on the windows, the barista who remembers your name.</p>
+      <p>In 2010, our founders rented a small corner space on Coffee House Street and opened their doors with three espresso blends, six tables, and an unshakeable belief that great coffee has the power to bring people together.</p>
+      <p>Word spread not through advertising, but through neighbors telling neighbors. Within a year, that corner space became the heart of the community — and the dream kept growing.</p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline">
+    <div class="timeline-header reveal-section">
+      <p class="section-eyebrow" style="color:#c8935a;">Our Journey</p>
+      <h2>Milestones That Shaped Us</h2>
+      <p>Every chapter brought new lessons, new flavors, and deeper roots in the community we love.</p>
+    </div>
+    <div class="tl-track">
+
+      <div class="tl-item tl-reveal">
+        <div class="tl-content">
+          <p class="tl-year">2010</p>
+          <h3>The First Pour</h3>
+          <p>Coffee House opens its doors on a rainy Tuesday morning. Forty cups sold. One couple returns the same evening — they've been regulars ever since.</p>
+        </div>
+        <div class="tl-dot-col"><div class="tl-dot">01</div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <div class="tl-item tl-reveal">
+        <div class="tl-empty"></div>
+        <div class="tl-dot-col"><div class="tl-dot">02</div></div>
+        <div class="tl-content">
+          <p class="tl-year">2013</p>
+          <h3>Sourcing Our Own Beans</h3>
+          <p>We travel to Ethiopia and Colombia to meet the farmers behind our beans. Our first direct-trade partnership begins — quality and ethics, hand in hand.</p>
+        </div>
+      </div>
+
+      <div class="tl-item tl-reveal">
+        <div class="tl-content">
+          <p class="tl-year">2016</p>
+          <h3>The Barista Academy</h3>
+          <p>We launch an in-house training program for aspiring baristas, giving local youth a craft and a career. Over 200 graduates to date.</p>
+        </div>
+        <div class="tl-dot-col"><div class="tl-dot">03</div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <div class="tl-item tl-reveal">
+        <div class="tl-empty"></div>
+        <div class="tl-dot-col"><div class="tl-dot">04</div></div>
+        <div class="tl-content">
+          <p class="tl-year">2019</p>
+          <h3>Three Locations, One Soul</h3>
+          <p>We open our second and third cafés, each with its own character but the same unwavering commitment: every cup matters.</p>
+        </div>
+      </div>
+
+      <div class="tl-item tl-reveal">
+        <div class="tl-content">
+          <p class="tl-year">2026</p>
+          <h3>Still Brewing, Still Dreaming</h3>
+          <p>A new roastery, a seasonal menu celebrating local harvests, and a community events calendar that fills up months in advance. The story continues.</p>
+        </div>
+        <div class="tl-dot-col"><div class="tl-dot">05</div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="values-header reveal-section">
+      <p class="section-eyebrow">What We Stand For</p>
+      <h2>More Than Coffee</h2>
+      <p>The principles that guide every decision, from the beans we source to the way we greet you at the door.</p>
+    </div>
+    <div class="values-grid">
+      <div class="val-card reveal-section stagger-1">
+        <div class="val-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Quality Beans</h3>
+        <p>We source only from farms that share our standards — sustainable, traceable, and treated with respect for the land and the people who tend it.</p>
+      </div>
+      <div class="val-card reveal-section stagger-2">
+        <div class="val-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Community First</h3>
+        <p>Coffee House was born from community and continues to give back — through events, scholarships, local partnerships, and open doors for everyone.</p>
+      </div>
+      <div class="val-card reveal-section stagger-3">
+        <div class="val-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Craft & Care</h3>
+        <p>Every drink is made to order, by hand, by a barista who takes genuine pride in the pour. No shortcuts. No compromises. Just coffee done right.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="team-quote">
+    <div class="quote-inner reveal-section">
+      <span class="quote-mark">"</span>
+      <blockquote>We didn't set out to build a coffee brand. We set out to build a place where people feel at home — and the coffee just happens to be extraordinary.</blockquote>
+      <cite>— The Founders, Coffee House</cite>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team">
+    <div class="team-header reveal-section">
+      <p class="section-eyebrow" style="color:#c8935a;">The People</p>
+      <h2>Faces Behind Every Cup</h2>
+      <p style="color:#a08060;">A dedicated team who treat every shift as a reason to do something memorable.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal-section stagger-1">
+        <div class="team-img-wrap">
+          <img class="avatar" src="./images/ceo-4.jpg" alt="James, Co-Founder" />
+          <div class="team-overlay">
+            <p>Head Roaster with 14 years of experience crafting our signature blends.</p>
+          </div>
+        </div>
+        <h4>James Rivera</h4>
+        <span>Co-Founder & Head Roaster</span>
+      </div>
+      <div class="team-card reveal-section stagger-2">
+        <div class="team-img-wrap">
+          <img class="avatar" src="./images/ceo-2.jpg" alt=", Co-Founder" />
+          <div class="team-overlay">
+            <p>The design mind behind every space, menu, and brand experience we create.</p>
+          </div>
+        </div>
+        <h4>Mendez</h4>
+        <span>Co-Founder & Creative Director</span>
+      </div>
+      <div class="team-card reveal-section stagger-3">
+        <div class="team-img-wrap">
+          <img class="avatar" src="./images/ceo-3.jpg" alt="Marcus, Head Barista" />
+          <div class="team-overlay">
+            <p>Champion barista and mentor behind our 200+ graduate Barista Academy.</p>
+          </div>
+        </div>
+        <h4>Marcus Tan</h4>
+        <span>Head Barista & Trainer</span>
+      </div>
+      <div class="team-card reveal-section stagger-4">
+        <div class="team-img-wrap">
+          <img class="avatar" src="./images/ceo-1.jpg" alt="Priya, Community Manager" />
+          <div class="team-overlay">
+            <p>The heartbeat of our events program — connecting neighbors over great coffee.</p>
+          </div>
+        </div>
+        <h4>Priya Nair</h4>
+        <span>Community & Events Lead</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner reveal-section">
+    <h2>Come in. Pull up a chair.<br/>Let's share a cup.</h2>
+    <button class="btn-dark">
+      Visit Us Today
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="display:inline-flex;">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#2e1a0e"/><path d="M10 25 Q10 32 20 32 Q30 32 30 25 L28 18 H12 L10 25Z" fill="#c8935a" opacity="0.9"/><path d="M28 20 Q34 20 34 24 Q34 28 28 27" stroke="#c8935a" stroke-width="2" fill="none"/><path d="M16 14 Q17 10 16 7" stroke="#c8935a" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M20 13 Q21 9 20 6" stroke="#c8935a" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M24 14 Q25 10 24 7" stroke="#c8935a" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+          <span class="logo-text" style="font-size:1.3rem;">Coffee House</span>
+        </a>
+        <p>Thank you for being a part of our coffee journey. We can't wait to serve you.</p>
+        <div class="footer-socials">
+          <div class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <div class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+          <div class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43 2a9 9 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.11 2a4.5 4.5 0 0 0-4.5 4.5c0 .35.04.7.11 1.03A12.83 12.83 0 0 1 2.5 2.89a4.5 4.5 0 0 0 1.39 6A4.49 4.49 0 0 1 1.64 8v.06a4.5 4.5 0 0 0 3.61 4.41 4.52 4.52 0 0 1-2.03.08 4.51 4.51 0 0 0 4.21 3.13A9.05 9.05 0 0 1 1 19.54a12.77 12.77 0 0 0 6.92 2.03c8.3 0 12.85-6.88 12.85-12.85 0-.2 0-.39-.01-.58A9.22 9.22 0 0 0 23 3z"/></svg></div>
+          <div class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="ourstory.html">Our Story</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          123 Coffee House St., Brew Town, CA 90210, USA
+        </div>
+        <div class="contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17z"/></svg>
+          +1 234 567 8900
+        </div>
+        <div class="contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@coffeehouse.com
+        </div>
+        <div class="contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mon - Sun: 8:00 AM - 10:00 PM
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.85rem;color:#a08060;margin-bottom:14px;">Subscribe to get updates on new arrivals, offers, and more.</p>
+        <div class="newsletter-input-wrap">
+          <input type="email" placeholder="Your email address" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Coffee House. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    /* ── PARALLAX HERO ── */
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      heroBg.style.transform = `translateY(${y * 0.35}px)`;
+    }, { passive: true });
+
+    /* ── NAV SCROLL SHADOW ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* ── INTERSECTION OBSERVER – reveal animations ── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(
+      '.reveal-section, .reveal-left, .reveal-right, .tl-reveal'
+    ).forEach(el => revealObserver.observe(el));
+
+    /* ── COUNTER ANIMATION ── */
+    function animateCounter(el) {
+      const target = +el.dataset.target;
+      const duration = 1600;
+      const step = target / (duration / 16);
+      let current = 0;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = Math.floor(current);
+      }, 16);
+    }
+
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.stat-num').forEach(animateCounter);
+          statObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    const statsEl = document.querySelector('.hero-stats');
+    if (statsEl) statObserver.observe(statsEl);
+
+    /* ── TIMELINE PROGRESS LINE DRAW ── */
+    const tlTrack = document.querySelector('.tl-track');
+    if (tlTrack) {
+      const tlObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tlTrack.classList.add('draw-line');
+          }
+        });
+      }, { threshold: 0.1 });
+      tlObserver.observe(tlTrack);
+    }
+  </script>
 
 </body>
 
