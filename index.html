@@ -50,6 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
+
     <!---------------->
 
 </head>
@@ -72,7 +73,7 @@
         </ul>
 
 
-        <div id="nav_btn" class="login_btn items-center p-1 hidden md:flex ">
+        <div id="nav_btn" class="login_btn  items-center p-1 hidden md:flex ">
             <i class="fa-solid fa-user text-amber-600"></i>
             <form action="./login.html">
                 <button type="submit" class="p-1 text-sm text-white">LOGIN</button>
@@ -85,61 +86,146 @@
 
 
     <!-- HERO-SECTION -->
-    <section class="heros">
-        <img src="./images/coffee.png" alt="" style="object-fit: cover;">
+    <section class="heros flex md:items-start justify-center items-end bottom-0  flex-col bg-amber-950">
+        <img src="./images/coffee.png" alt="">
 
-        <div class="text-contents flex flex-col flex-wrap w-80 gap-3">
-            <h1 class="md:text-3xl font-bold">Good Days Start</h1>
-            <h1 class="md:text-3xl font-bold">With A <b class="font-medium text-amber-600">Coffee</b></h1>
+        <div
+            class="text-contents absolute my-5 text-white justify-center  w-full flex flex-col flex-wrap md:w-80 gap-3 md mt-5 rounded-2xl">
+            <h1 class="text-2xl">Good Days Start With A <b class="font-medium text-amber-600">Coffee</b></h1>
+            <div
+                class="flex bg-amber-900 hover:scale-x-110 w-50 h-1 transition-all duration-300 cursor-poin rounded-4xl">
+
+            </div>
+            <h1 class="text-2xl">GET A COFFEE <b class="font-medium text-amber-600">ENJOY</b></h1>
             <p>Welcome to Coffee House, where every cup is brewed with love and every moment is made special.</p>
-            <div class="heros_btn flex gap-3">
-                <button class="border p-2 bg-amber-700 border-amber-700 rounded ">Expolre Menu <i
-                        class="fa-solid fa-mug-saucer"></i></button>
-                <button class="border p-2 bg- border-amber-800 rounded">About us</button>
+            <div
+                class="flex bg-amber-900 hover:scale-x-110 w-50 h-1 transition-all duration-300 cursor-poin rounded-4xl">
+
+            </div>
+            <div class="heros_btn flex gap-3 items-start">
+                <button
+                    class="border cursor-pointer transition-all duration-300 hover:opacity-50 p-1.5 bg-amber-700 text-white border-amber-700 rounded ">Expolre
+                    Menu <i class="fa-solid fa-mug-saucer"></i></button>
+                <button
+                    class="border transition-all duration-300 hover:opacity-50 cursor-pointer p-1.5 bg- border-amber-800 rounded">About
+                    us</button>
             </div>
         </div>
 
-        <div class=" w-full" id="service">
 
-            <div class="service  text-amber-950 w-fit h-auto p-2 flex justify-center items-center">
-                <img src="./images/cup-of-coffee.png" alt="">
-                <div class="pl-2">
-                    <p class=" font-bold">Quality Coffee</p>
-                    <p class="text-sm">Made From</p>
-                    <p class="text-sm">finest beans</p>
-                </div>
-            </div>
-
-            <div class="service  text-amber-950 w-fit h-auto p-2 flex justify-center items-center">
-                <img src="./images/piece-of-cake.png" alt="">
-                <div class="pl-2">
-                    <p class=" font-bold">Quality Coffee</p>
-                    <p class="text-sm">Made From</p>
-                    <p class="text-sm">finest beans</p>
-                </div>
-            </div>
-
-            <div class="service  text-amber-950 w-fit h-auto p-2 flex justify-center items-center">
-                <img src="./images/heart.png" alt="">
-                <div class="pl-2">
-                    <p class=" font-bold">Quality Coffee</p>
-                    <p class="text-sm">Made From</p>
-                    <p class="text-sm">finest beans</p>
-                </div>
-            </div>
-
-            <div class="service  text-amber-950 w-fit h-auto p-2 flex justify-center items-center">
-                <img src="./images/sofa.png" alt="">
-                <div class="pl-2">
-                    <p class=" font-bold">Quality Coffee</p>
-                    <p class="text-sm">Made From</p>
-                    <p class="text-sm">finest beans</p>
-                </div>
-            </div>
-
-        </div>
     </section>
     <!------------------>
+
+    <!-- SERVICE SECTION -->
+    <div class="service">
+
+        <!-- ITEM ONE -->
+        <div class="service-item">
+            <img src="./images/coffee-logo.png" alt="">
+            <div class="description flex gap-0.5 flex-col">
+                <p class="font-bold">A DELICIOUS CUP OF COFFEE</p>
+                <p>Made From finest beans</p>
+                <span class="border border-amber-950 p-0.5 px-1 rounded w-fit">Get This</span>
+            </div>
+        </div>
+        <!---->
+
+        <!-- ITEM TWO -->
+        <div class="service-item">
+            <img src="./images/piece-of-cake.png" alt="">
+            <div class="description flex gap-0.5 flex-col">
+                <p class="font-bold">A DELICIOUS CUP OF COFFEE</p>
+                <p>Made From finest beans</p>
+                <span class="border border-amber-950 p-0.5 px-1 rounded w-fit">Get This</span>
+            </div>
+        </div>
+        <!---->
+
+        <!-- ITEM THERE -->
+        <div class="service-item">
+            <img src="./images/heart.png" alt="">
+            <div class="description flex flex-col gap-1">
+                <p class="font-bold">A DELICIOUS CUP OF COFFEE</p>
+                <p>Made From finest beans</p>
+                <span class="border border-amber-950 p-0.5 px-1 rounded w-fit">Get This</span>
+            </div>
+        </div>
+        <!---->
+
+        <!-- ITEM FOUR -->
+        <div class="service-item">
+            <img src="./images/sofa.png" alt="">
+            <div class="description flex flex-col gap-1">
+                <p class="font-bold">A DELICIOUS CUP OF COFFEE</p>
+                <p>Made From finest beans</p>
+                <span class="border border-amber-950 p-0.5 px-1 rounded w-fit">Get This</span>
+            </div>
+        </div>
+        <!---->
+
+    </div>
+    <!---->
+
+    <!-- POPULAR-ITEMS -->
+
+    <div class="popular-heading">
+        <h1 class="mt-5 p-1 rounded font-medium text-3xl text-white w-fit">POPULAR ITEMS</h1>
+
+    </div>
+
+    <div class="popular-section mt-1">
+
+        <!-- POULAR-ITEM ONE -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/1200x/2f/53/13/2f53139ff4cb36a33ff4a9582b5be6a9.jpg" alt="">
+            <span>Cappucino | $20</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+        <!-- POULAR-ITEM TWO -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/736x/f4/e5/85/f4e585f0b5e21341a70937bc71d1a76b.jpg" alt="">
+            <span>Latee | $25</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+        <!-- POULAR-ITEM THREE -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/1200x/a4/0f/c7/a40fc77f65686f40dbef8913e809cc34.jpg" alt="">
+            <span>Mocha | $22</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+        <!-- POULAR-ITEM FOUR -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/736x/a4/51/f6/a451f6efc7775a84cfdeb06184a02f1b.jpg" alt="">
+            <span>Iced Coffee | $30</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+        <!-- POULAR-ITEM FIVE -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/736x/0b/7b/25/0b7b25e48258ddd399b24ec6fa42fc54.jpg" alt="">
+            <span>Coco Cake | $34</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+        <!-- POULAR-ITEM SIX -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/1200x/5d/23/ef/5d23ef9cd200738b787618a0f50862f5.jpg" alt="">
+            <span>Lava Cake | $50</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+    </div>
+    <!---->
+
 
     <!-- FOORE SECTION -->
     <footer>
