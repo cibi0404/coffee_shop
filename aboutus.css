@@ -1,0 +1,149 @@
+body{
+    background:#1b0d05;
+    color:white;
+}
+
+
+/* Hero */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:40px 7%;
+}
+
+.content{
+    width:45%;
+}
+
+.content h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.content h2{
+    color:#d7a16e;
+    font-family:'Great Vibes',cursive;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.content p{
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.content button{
+    background:#c08b58;
+    border:none;
+    padding:15px 35px;
+    border-radius:8px;
+    color:white;
+    cursor:pointer;
+}
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("images/Cafe.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* Features */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:40px 7%;
+}
+
+.box{
+    display:flex;
+    gap:15px;
+    background:#2b160b;
+    padding:20px;
+    border-radius:20px;
+}
+
+.box i{
+    width:60px;
+    height:60px;
+    background:#d7a16e;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    font-size:22px;
+}
+
+.box p{
+    color:#ccc;
+    font-size:14px;
+}
+
+/* Gallery */
+
+.gallery{
+    padding:0 7% 50px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:15px;
+    border:2px solid white;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+
+    .hero{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .content,
+    .image{
+        width:100%;
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .content h1{
+        font-size:35px;
+    }
+
+    .content h2{
+        font-size:32px;
+    }
+}

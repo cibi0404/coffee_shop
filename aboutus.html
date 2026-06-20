@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE -->
+    <title>COFFE-HOUSE</title>
+    <!------------------------>
+
+    <!-- ICON -->
+    <link rel="icon" href="./images/ICON.png">
+    <!------------------------------>
+
+    <!-- LINKING STYLE.CSS -->
+     <link rel="stylesheet" href="./aboutus.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <!------------------------------------->
+
+    <!-- LINKING TAILWIND .CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!------------------------------------------------------------------------>
+
+    <!-- FONT-AWESOME-CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <!------------------------------------------------------------------------------------------------------------------------------------>
+
+    <!-- GOOGLE FONTS -->
+
+    <!--GOOGLE-POPINS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <!--GREAT-VIBES-CURSIVE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+    <!--PLAYFAIR-DISPLAY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!---------------->
+
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <nav class="HEADER-SECTION bg-amber-900 flex items-center justify-center p-2 md:justify-between gap-10" id="HEADER">
+        <div class="HEADER-LOGO flex items-center  gap-2">
+            <img src="./images/coffee-logo2.png" class="w-10 h-auto" alt="logo">
+            <h1 class="text-2xl text-white items-center mt-auto">Coffee House</h1>
+        </div>
+
+        <ul id="nav_ul" class="font text-white gap-5 hidden md:flex cursor-pointer ">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li class="active"><a href="./aboutus.html">About Us</a></li>
+            <li><a href="./ourstory.html">Our Story</a></li>
+            <li><a href="./contactus.html">Contact</a></li>
+        </ul>
+
+        <div id="nav_btn" class="login_btn items-center p-1 hidden md:flex ">
+            <i class="fa-solid fa-user text-amber-600"></i>
+            <form action="./login.html">
+            <button type="submit" class="p-1 text-sm text-white">LOGIN</button>
+            </form>
+        </div>
+
+    </nav>
+    <!-------------------->
+
+     <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="content">
+
+            <h1>ABOUT US</h1>
+
+            <h2>Our story begins with coffee</h2>
+
+            <p>
+                Coffee House is more than just a coffee shop.
+                It's a place where great coffee, delicious food,
+                and warm moments come together.
+            </p>
+
+            <button>Learn More</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="box">
+            <i class="fa-solid fa-bullseye"></i>
+            <div>
+                <h3>Our Mission</h3>
+                <p>To deliver high-quality coffee and excellent service.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-seedling"></i>
+            <div>
+                <h3>Quality Beans</h3>
+                <p>We use ethically sourced premium coffee beans.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-mug-hot"></i>
+            <div>
+                <h3>Expert Baristas</h3>
+                <p>Our skilled baristas craft every cup with passion.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-mug-saucer"></i>
+            <div>
+                <h3>Cozy Atmosphere</h3>
+                <p>A warm and inviting space to relax.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Gallery -->
+    <section class="gallery">
+
+        <div class="card">
+            <img src="images/I1.jpeg">
+        </div>
+
+        <div class="card">
+            <img src="images/I2.jpeg">
+        </div>
+
+        <div class="card">
+            <img src="images/I3.jpeg">
+        </div>
+
+        <div class="card">
+            <img src="images/I4.jpeg">
+        </div>
+
+    </section>
+
+    <!-- SCRIP.JS -->
+    <script src="./index.js"></script>
+    <!------------------------------>
+
+</body>
+
+</html>

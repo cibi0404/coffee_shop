@@ -15,6 +15,8 @@
 
     <!-- LINKING STYLE.CSS -->
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="./navbar.css">
     <!------------------------------------->
 
     <!-- LINKING TAILWIND .CSS -->
@@ -48,6 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
+
     <!---------------->
 
 </head>
@@ -62,106 +65,216 @@
         </div>
 
         <ul id="nav_ul" class="font text-white gap-5 hidden md:flex cursor-pointer ">
-            <li class="active">Home</li>
-            <li>Menu</li>
-            <li>About Us</li>
-            <li>Our Story</li>
-            <li>Contact</li>
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+            <li><a href="./ourstory.html">Our Story</a></li>
+            <li><a href="./contactus.html">Contact</a></li>
         </ul>
 
-        <div class="menu md:hidden  flex items-center justify-between my-auto">
-            <!-- <span id="menu" class="transition-all duration-200 cursor-pointer"></span> -->
-             <img src="./images/menu-icon.png" alt="" style="width: 20px; height: auto;">
-        </div>
 
-        <div id="nav_btn" class="login_btn items-center p-1 hidden md:flex ">
+        <div id="nav_btn" class="login_btn  items-center p-1 hidden md:flex ">
             <i class="fa-solid fa-user text-amber-600"></i>
             <form action="./login.html">
-            <button type="submit" class="p-1 text-sm text-white">LOGIN</button>
+                <button type="submit" class="p-1 text-sm text-white">LOGIN</button>
             </form>
         </div>
 
     </nav>
     <!-------------------->
 
-    <!-- SIDE NAV -->
 
-    <div class="bg-black z-50 top-0 transition-all duration-400 md:hidden fixed flex flex-col items-center gap-5 justify-center p-2"
-        style="width: 50%; height: 100%;" id="sidenav">
 
-        <ul id="nav_ul" class="font text-white grid grid-cols-1 gap-5  cursor-pointer ">
-            <li class="active">Home</li>
-            <li>Menu</li>
-            <li>About Us</li>
-            <li>Our Story</li>
-            <li>Contact</li>
-            <div id="nav_btn" class="login_btn  items-center p-1 justify-center bg-amber-600 flex ">
-                <i class="fa-solid fa-user text-amber-0"></i>
-                <button class="p-1 text-sm text-white">LOGIN</button>
+    <!-- HERO-SECTION -->
+    <section class="heros flex md:items-start justify-center items-end bottom-0  flex-col bg-amber-950">
+        <img src="./images/coffee.png" alt="">
+
+        <div
+            class="text-contents absolute my-5 text-white justify-center  w-full flex flex-col flex-wrap md:w-80 gap-3 md mt-5 rounded-2xl">
+            <h1 class="text-2xl">Good Days Start With A <b class="font-medium text-amber-600">Coffee</b></h1>
+            <div
+                class="flex bg-amber-900 hover:scale-x-110 w-50 h-1 transition-all duration-300 cursor-poin rounded-4xl">
+
             </div>
-        </ul>
+            <h1 class="text-2xl">GET A COFFEE <b class="font-medium text-amber-600">ENJOY</b></h1>
+            <p>Welcome to Coffee House, where every cup is brewed with love and every moment is made special.</p>
+            <div
+                class="flex bg-amber-900 hover:scale-x-110 w-50 h-1 transition-all duration-300 cursor-poin rounded-4xl">
+
+            </div>
+            <div class="heros_btn flex gap-3 items-start">
+                <button
+                    class="border cursor-pointer transition-all duration-300 hover:opacity-50 p-1.5 bg-amber-700 text-white border-amber-700 rounded ">Expolre
+                    Menu <i class="fa-solid fa-mug-saucer"></i></button>
+                <button
+                    class="border transition-all duration-300 hover:opacity-50 cursor-pointer p-1.5 bg- border-amber-800 rounded">About
+                    us</button>
+            </div>
+        </div>
+
+
+    </section>
+    <!------------------>
+
+    <!-- SERVICE SECTION -->
+    <div class="service">
+
+        <!-- ITEM ONE -->
+        <div class="service-item">
+            <img src="./images/coffee-logo.png" alt="">
+            <div class="description flex gap-0.5 flex-col">
+                <p class="font-bold">A DELICIOUS CUP OF COFFEE</p>
+                <p>Made From finest beans</p>
+                <span class="border border-amber-950 p-0.5 px-1 rounded w-fit">Get This</span>
+            </div>
+        </div>
+        <!---->
+
+        <!-- ITEM TWO -->
+        <div class="service-item">
+            <img src="./images/piece-of-cake.png" alt="">
+            <div class="description flex gap-0.5 flex-col">
+                <p class="font-bold">A DELICIOUS CUP OF COFFEE</p>
+                <p>Made From finest beans</p>
+                <span class="border border-amber-950 p-0.5 px-1 rounded w-fit">Get This</span>
+            </div>
+        </div>
+        <!---->
+
+        <!-- ITEM THERE -->
+        <div class="service-item">
+            <img src="./images/heart.png" alt="">
+            <div class="description flex flex-col gap-1">
+                <p class="font-bold">A DELICIOUS CUP OF COFFEE</p>
+                <p>Made From finest beans</p>
+                <span class="border border-amber-950 p-0.5 px-1 rounded w-fit">Get This</span>
+            </div>
+        </div>
+        <!---->
+
+        <!-- ITEM FOUR -->
+        <div class="service-item">
+            <img src="./images/sofa.png" alt="">
+            <div class="description flex flex-col gap-1">
+                <p class="font-bold">A DELICIOUS CUP OF COFFEE</p>
+                <p>Made From finest beans</p>
+                <span class="border border-amber-950 p-0.5 px-1 rounded w-fit">Get This</span>
+            </div>
+        </div>
+        <!---->
+
+    </div>
+    <!---->
+
+    <!-- POPULAR-ITEMS -->
+
+    <div class="popular-heading">
+        <h1 class="mt-5 p-1 rounded font-medium text-3xl text-white w-fit">POPULAR ITEMS</h1>
 
     </div>
 
+    <div class="popular-section mt-1">
 
-    <!-------------------->
+        <!-- POULAR-ITEM ONE -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/1200x/2f/53/13/2f53139ff4cb36a33ff4a9582b5be6a9.jpg" alt="">
+            <span>Cappucino | $20</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
 
-    <!-- HERO-SECTION -->
-    <section class="heros">
-        <img src="./images/coffee.png" alt="" style="object-fit: cover;">
+        <!-- POULAR-ITEM TWO -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/736x/f4/e5/85/f4e585f0b5e21341a70937bc71d1a76b.jpg" alt="">
+            <span>Latee | $25</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
 
-        <div class="text-contents flex flex-col flex-wrap w-80 gap-3">
-            <h1 class="md:text-3xl font-bold">Good Days Start</h1>
-            <h1 class="md:text-3xl font-bold">With A <b class="font-medium text-amber-600">Coffee</b></h1>
-            <p>Welcome to Coffee House, where every cup is brewed with love and every moment is made special.</p>
-            <div class="heros_btn flex gap-3">
-                <button class="border p-2 bg-amber-700 border-amber-700 rounded ">Expolre Menu <i
-                        class="fa-solid fa-mug-saucer"></i></button>
-                <button class="border p-2 bg- border-amber-800 rounded">About us</button>
+        <!-- POULAR-ITEM THREE -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/1200x/a4/0f/c7/a40fc77f65686f40dbef8913e809cc34.jpg" alt="">
+            <span>Mocha | $22</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+        <!-- POULAR-ITEM FOUR -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/736x/a4/51/f6/a451f6efc7775a84cfdeb06184a02f1b.jpg" alt="">
+            <span>Iced Coffee | $30</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+        <!-- POULAR-ITEM FIVE -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/736x/0b/7b/25/0b7b25e48258ddd399b24ec6fa42fc54.jpg" alt="">
+            <span>Coco Cake | $34</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+        <!-- POULAR-ITEM SIX -->
+        <div class="popular-items">
+            <img src="https://i.pinimg.com/1200x/5d/23/ef/5d23ef9cd200738b787618a0f50862f5.jpg" alt="">
+            <span>Lava Cake | $50</span>
+            <span>★★★★★</span>
+        </div>
+        <!---->
+
+    </div>
+    <!---->
+
+
+    <!-- FOORE SECTION -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>☕ Coffee House</h3>
+                <p>Serving the finest coffee since 2024</p>
+                <p style="margin-top:10px; color: #8b6b5a;">
+                    📍 123 Coffee Street<br />
+                    ☎ (555) 123-4567<br />
+                    ✉ info@coffeehouse.com
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Careers</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Mon - Fri: 7:00 AM - 9:00 PM</p>
+                <p>Saturday: 8:00 AM - 10:00 PM</p>
+                <p>Sunday: 8:00 AM - 6:00 PM</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="footer-social">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="YouTube">▶️</a>
+                </div>
+                <p style="margin-top:15px; font-size:13px; color:#8b6b5a;">
+                    Subscribe to our newsletter
+                </p>
             </div>
         </div>
 
-        <div class=" w-full" id="service">
-
-            <div class="service  text-amber-950 w-fit h-auto p-2 flex justify-center items-center">
-                <img src="./images/cup-of-coffee.png" alt="">
-                <div class="pl-2">
-                    <p class=" font-bold">Quality Coffee</p>
-                    <p class="text-sm">Made From</p>
-                    <p class="text-sm">finest beans</p>
-                </div>
-            </div>
-
-            <div class="service  text-amber-950 w-fit h-auto p-2 flex justify-center items-center">
-                <img src="./images/piece-of-cake.png" alt="">
-                <div class="pl-2">
-                    <p class=" font-bold">Quality Coffee</p>
-                    <p class="text-sm">Made From</p>
-                    <p class="text-sm">finest beans</p>
-                </div>
-            </div>
-
-            <div class="service  text-amber-950 w-fit h-auto p-2 flex justify-center items-center">
-                <img src="./images/heart.png" alt="">
-                <div class="pl-2">
-                    <p class=" font-bold">Quality Coffee</p>
-                    <p class="text-sm">Made From</p>
-                    <p class="text-sm">finest beans</p>
-                </div>
-            </div>
-
-            <div class="service  text-amber-950 w-fit h-auto p-2 flex justify-center items-center">
-                <img src="./images/sofa.png" alt="">
-                <div class="pl-2">
-                    <p class=" font-bold">Quality Coffee</p>
-                    <p class="text-sm">Made From</p>
-                    <p class="text-sm">finest beans</p>
-                </div>
-            </div>
-
+        <div class="footer-bottom">
+            &copy; 2026 <span>Coffee House</span>. All rights reserved. | Made with ❤️
         </div>
-    </section>
-    <!------------------>
+    </footer>
+    <!------>
 
     <!-- SCRIP.JS -->
     <script src="./index.js"></script>

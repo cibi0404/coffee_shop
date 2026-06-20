@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* HEADER SECTION */
+
+/* HEADER-LOGO */
+.HEADER-SECTION{
+    position: sticky;
+    top: 0%;
+    left: 0;
+    right: 0%;
+    z-index: 55;
+    width: 100%;
+}
+
+.HEADER-LOGO {
+    font-family: "Great Vibes", cursive;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login_btn{
+    border: 1px solid #cc6e26;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login_btn i:hover{
+    color: #ffffff;
+
+}
+
+.menu span{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.menu span:hover{
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+li,li:hover{
+    transition: 0.2s ease;
+    border-bottom:transparent 2px solid;
+    width: fit-content;
+}
+
+.active,li:hover{
+    color: #cc6e26;
+    border-bottom: 2px solid;
+}
+
+/*--------------------------*/
