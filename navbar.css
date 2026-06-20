@@ -3,6 +3,15 @@
 /* HEADER SECTION */
 
 /* HEADER-LOGO */
+.HEADER-SECTION{
+    position: sticky;
+    top: 0%;
+    left: 0;
+    right: 0%;
+    z-index: 55;
+    width: 100%;
+}
+
 .HEADER-LOGO {
     font-family: "Great Vibes", cursive;
     align-items: center;

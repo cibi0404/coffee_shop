@@ -1,8 +1,5 @@
 /* Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-}
+
 
 body {
     background-color: #1a0f0a;
@@ -11,11 +8,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 50vh;
 }
 
 /* Contact Section */
 .contact-section {
+    margin-top: 100px;
     width: 100%;
     position: relative;
     padding: 80px 6%;
@@ -216,6 +215,9 @@ body {
 @media (max-width: 992px) {
     .contact-container {
         grid-template-columns: 1fr;
+    }
+    .contact-section{
+        margin-top: 0;
     }
 }
 
